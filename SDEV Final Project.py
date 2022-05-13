@@ -33,45 +33,45 @@ class MeasuringGUI(EasyFrame):
         self.TsptoMl_button = self.addButton(text= "Tsp to Ml", row=5, column=0, command= self.convert_TsptoMl)
         self.MltoTsp_button = self.addButton(text= "Ml to Tsp", row=5, column=1, command= self.convert_MltoTsp)
 #define functions for third row
-    def convert_CtoF(self):
-        self.celsius = float(self.inputField.getText())
-        self.fahrenheit = (9/5 * self.celsius) + 32
-        self.outputField.setText(format(self.fahrenheit, '.2f'))
+    def convert_CupstoFlOz(self):
+        self.cups = float(self.inputField.getText())
+        self.floz = (self.cups * 8)
+        self.outputField.setText(format(self.floz, '.2f'))
 
-    def convert_FtoC(self):
-        self.fahrenheit = float(self.inputField.getText())
-        self.celsius = (self.fahrenheit - 32) * 5/9
-        self.outputField.setText(format(self.celsius, '.2f'))
+    def convert_FlOztoCups(self):
+        self.floz = float(self.inputField.getText())
+        self.cups = (self.floz / 8)
+        self.outputField.setText(format(self.cups, '.2f'))
 #define functions for fourth row
-    def convert_CtoF(self):
-        self.celsius = float(self.inputField.getText())
-        self.fahrenheit = (9/5 * self.celsius) + 32
-        self.outputField.setText(format(self.fahrenheit, '.2f'))
+    def convert_FlOztoTbsp(self):
+        self.floz = float(self.inputField.getText())
+        self.tbsp = (self.floz * 2)
+        self.outputField.setText(format(self.tbsp, '.2f'))
 
-    def convert_FtoC(self):
-        self.fahrenheit = float(self.inputField.getText())
-        self.celsius = (self.fahrenheit - 32) * 5/9
-        self.outputField.setText(format(self.celsius, '.2f'))
+    def convert_TbsptoFlOz(self):
+        self.tbsp = float(self.inputField.getText())
+        self.floz = (self.tbsp / 2)
+        self.outputField.setText(format(self.floz, '.2f'))
 #define functions for fifth row
-    def convert_CtoF(self):
-        self.celsius = float(self.inputField.getText())
-        self.fahrenheit = (9/5 * self.celsius) + 32
-        self.outputField.setText(format(self.fahrenheit, '.2f'))
+    def convert_TbsptoTsp(self):
+        self.tbsp = float(self.inputField.getText())
+        self.tsp = (self.tbsp * 3)
+        self.outputField.setText(format(self.tsp, '.2f'))
 
-    def convert_FtoC(self):
-        self.fahrenheit = float(self.inputField.getText())
-        self.celsius = (self.fahrenheit - 32) * 5/9
-        self.outputField.setText(format(self.celsius, '.2f'))
+    def convert_TsptoTbsp(self):
+        self.tsp = float(self.inputField.getText())
+        self.tbsp = (self.tsp / 3)
+        self.outputField.setText(format(self.tbsp, '.2f'))
 #define functions for sixth row
-    def convert_CtoF(self):
-        self.celsius = float(self.inputField.getText())
-        self.fahrenheit = (9/5 * self.celsius) + 32
-        self.outputField.setText(format(self.fahrenheit, '.2f'))
+    def convert_TsptoMl(self):
+        self.tsp = float(self.inputField.getText())
+        self.ml = (self.tsp * 4.92892)
+        self.outputField.setText(format(self.ml, '.2f'))
 
-    def convert_FtoC(self):
-        self.fahrenheit = float(self.inputField.getText())
-        self.celsius = (self.fahrenheit - 32) * 5/9
-        self.outputField.setText(format(self.celsius, '.2f'))
+    def convert_MltoTsp(self):
+        self.ml = float(self.inputField.getText())
+        self.tsp = (self.ml / 4.92892)
+        self.outputField.setText(format(self.tsp, '.2f'))
 #start the main loop
 def main():
     MeasuringGUI().mainloop()
